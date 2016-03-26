@@ -1,0 +1,8 @@
+tr.info ng-repeat="template in templates | filter:query | orderBy:orderProp"
+  td
+    a ng-href="/templates/{{template.id}}"
+        | {{template.name}}
+  td
+    a ng-href="/templates/{{template.id}}/edit"
+      button class="btn btn-sm btn-primary toleft glyphicon glyphicon-wrench"
+    button confirmed-click="removeTemplate(template)" ng-confirm-click="" class="btn btn-sm btn-danger toright glyphicon glyphicon-remove"
